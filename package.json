@@ -1,0 +1,32 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "Task creat virtual keyboard for RSSchool",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrean-82/Virtual-Keyboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrean-82/Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/Andrean-82/Virtual-Keyboard#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
