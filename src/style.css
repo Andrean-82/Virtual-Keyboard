@@ -1,0 +1,143 @@
+.area {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper-keyboard {
+  max-width: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5px auto;
+  gap: 5px;
+  row-gap: 15px;
+}
+
+.window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 950px;
+  min-height: 100px;
+  margin: 0 30px 10px 30px;
+  padding: 10px;
+  border: 2px solid grey;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: white;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 4px solid grey;
+  background-color: grey;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+  -webkit-box-shadow: 5px 5px 5px black;
+          box-shadow: 5px 5px 5px black;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+#Backspace {
+  width: 102px;
+  background-color: #272626;
+}
+
+#CapsLock {
+  width: 102px;
+  background-color: #272626;
+}
+
+#Enter {
+  width: 104px;
+  background-color: #272626;
+}
+
+#ShiftLeft {
+  width: 104px;
+  background-color: #272626;
+}
+
+#Space {
+  width: 364px;
+}
+
+#ControlLeft {
+  width: 80px;
+  background-color: #272626;
+}
+
+#ControlRight {
+  width: 80px;
+  background-color: #272626;
+}
+
+#ArrowRight {
+  background-color: #272626;
+}
+
+#ArrowDown {
+  background-color: #272626;
+}
+
+#ArrowUp {
+  background-color: #272626;
+}
+
+#ArrowLeft {
+  background-color: #272626;
+}
+
+#Tab {
+  background-color: #272626;
+}
+
+#Delete {
+  background-color: #272626;
+}
+
+#ShiftRight {
+  background-color: #272626;
+}
+
+#AltLeft {
+  background-color: #272626;
+}
+
+#AltRight {
+  background-color: #272626;
+}
+
+.not-shadow {
+  width: 48px;
+  height: 48px;
+  margin-top: 2px;
+  margin-left: 2px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+}
+/*# sourceMappingURL=style.css.map */
