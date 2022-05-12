@@ -1,5 +1,6 @@
-import Keyboard from './Keyboard.js';
-import text from './language/engkey.js';
+/* eslint-disable no-undef */
+/* eslint-disable no-use-before-define */
+import Keyboard from './Keyboard';
 import './style.css';
 
 const Keys = [
@@ -9,25 +10,56 @@ const Keys = [
   ['ShiftLeft', 'IntlSlash', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ArrowUp', 'ShiftRight'],
   ['ControlLeft', 'OSLeft', 'AltLeft', 'Space', 'AltRight', 'ControlRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight'],
 ];
-
-const body = document.querySelector('body');
-const divcreat = document.createElement('div');
-divcreat.classList.add('area');
-body.appendChild(divcreat);
-const window = document.createElement('div');
-window.classList.add('window');
-divcreat.append(window);
-const wrapperKeyboard = document.createElement('div');
-wrapperKeyboard.classList.add('wrapper-keyboard');
-divcreat.append(wrapperKeyboard);
-
+let text;
+let N = window.localStorage.getItem('Keyboard') || 'en';
+if (N === 'en') {
+  text = Keyboard.Lang.engkey;
+} else {
+  text = Keyboard.Lang.ruskey;
+}
 let keyOne;
 let Id;
 const array = [];
 
+const body = document.querySelector('body');
+const divcreat = document.createElement('div');
+divcreat.classList.add('area');
+divcreat.textContent = 'Реализованона Windows 10, держать Shif + нажать Alt переключение языка :-))';
+body.appendChild(divcreat);
+const win = document.createElement('div');
+win.classList.add('window');
+divcreat.append(win);
+let wrapperKeyboard = document.createElement('div');
+wrapperKeyboard.classList.add('wrapper-keyboard');
+divcreat.append(wrapperKeyboard);
+
+document.addEventListener('keydown', (event) => {
+  const isShift = 'Shift';
+  if (isShift && event.key === 'Alt') {
+    divcreat.removeChild(wrapperKeyboard);
+    if (N === 'en') {
+      wrapperKeyboard = document.createElement('div');
+      wrapperKeyboard.classList.add('wrapper-keyboard');
+      divcreat.append(wrapperKeyboard);
+      text = Keyboard.Lang.ruskey;
+      localStorage.setItem('Keyboard', 'ru');
+      N = 'ru';
+      overkill();
+    } else {
+      wrapperKeyboard = document.createElement('div');
+      wrapperKeyboard.classList.add('wrapper-keyboard');
+      divcreat.append(wrapperKeyboard);
+      text = Keyboard.Lang.engkey;
+      localStorage.setItem('Keyboard', 'en');
+      N = 'en';
+      overkill();
+    }
+  }
+});
+
 function overkill() {
-  for (let i = 0; i < Keys.length; i++) {
-    for (let j = 0; j < Keys[i].length; j++) {
+  for (let i = 0; i < Keys.length; i += 1) {
+    for (let j = 0; j < Keys[i].length; j += 1) {
       keyOne = document.createElement('div');
       keyOne.id = Keys[i][j];
       keyOne.classList.add('button');
@@ -46,19 +78,19 @@ function createdKey(e) {
   const button = this.id;
   if (eventKeq.id === 'CapsLock') {
     Id = text.find((val) => val.code === button).shift;
-    array.push(window.textContent = Id);
+    array.push(win.textContent = Id);
     return text.shift;
-  } if (eventKeq.id != 'CapsLock') {
+  } if (eventKeq.id !== 'CapsLock') {
     eventKeq.classList.toggle('not-shadow');
     const button = this.id;
     Id = text.find((val) => val.code === button).small;
-    array.push(window.textContent = Id);
+    array.push(win.textContent = Id);
     if (eventKeq.id === 'Backspace') {
       array.pop();
       array.pop();
     }
-    window.textContent = array.join('');
+    win.textContent = array.join('');
     const elem = document.querySelector('.not-shadow');
-    elem.classlist.remove('not-shadow');
+    setTimeout(() => elem.classList.remove('not-shadow'), 500);
   }
 }

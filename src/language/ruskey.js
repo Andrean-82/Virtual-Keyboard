@@ -140,9 +140,14 @@ export default [
     code: 'Backslash',
   },
   {
-    small: 'Capslock',
+    small: 'DEL',
     shift: 'null',
-    code: 'Capslock',
+    code: 'Delete',
+  },
+  {
+    small: 'CapsLock',
+    shift: 'null',
+    code: 'CapsLock',
   },
   {
     small: 'ф',
@@ -205,14 +210,19 @@ export default [
     code: '',
   },
   {
-    small: 'Enter',
+    small: 'ENTER',
     shift: 'null',
     code: 'Enter',
   },
   {
     small: 'Shift',
     shift: 'null',
-    code: 'ShiftLeft shiftKey',
+    code: 'ShiftLeft',
+  },
+  {
+    small: '\\',
+    shift: 'null',
+    code: 'IntlSlash',
   },
   {
     small: 'я',
@@ -267,55 +277,55 @@ export default [
   {
     small: 'Shift',
     shift: 'null',
-    code: 'ShiftRight shiftKey',
+    code: 'ShiftRight',
   },
   {
     small: 'Ctrl',
     shift: 'hull',
-    code: 'ControlLeft ctrlKey',
+    code: 'ControlLeft',
   },
   {
     small: 'Win',
     shift: 'null',
-    code: 'MetaLeft metaKey',
+    code: 'OSLeft',
   },
   {
     small: 'Alt',
     shift: 'null',
-    code: 'AltLeft altKey',
+    code: 'AltLeft',
   },
   {
-    small: 'Space',
+    small: '',
     shift: 'null',
     code: 'Space',
   },
   {
     small: 'Alt',
     shift: 'null',
-    code: 'AltRight altKey',
+    code: 'AltRight',
   },
   {
     small: 'Ctrl',
     shift: 'null',
-    code: 'ControlRight ctrlKey',
+    code: 'ControlRight',
   },
   {
-    small: 'ArrowLeft',
+    small: 'Left',
     shift: 'null',
     code: 'ArrowLeft',
   },
   {
-    small: 'ArrowUp',
+    small: 'Up',
     shift: 'null',
     code: 'ArrowUp',
   },
   {
-    small: 'ArrowDown',
+    small: 'Down',
     shift: 'null',
     code: 'ArrowDown',
   },
   {
-    small: 'ArrowRight',
+    small: 'Right',
     shift: 'null',
     code: 'ArrowRight',
   },
