@@ -1,0 +1,105 @@
+.area{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+       
+}
+.wrapper-keyboard{
+    max-width: 950px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5px auto;
+    gap: 5px;
+    row-gap: 15px;    
+}
+.window{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 950px;
+    min-height: 100px;
+    margin: 0 30px 10px 30px;
+    padding: 10px;
+    border: 2px solid grey;
+    background-color: rgba(128,128,128,0.5);
+    color: white;
+}
+.button{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 4px solid grey;
+    background-color: grey;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow:  5px 5px 5px rgba(0,0,0, 1);
+    &:hover{
+        cursor: pointer;
+        background-color:rgba(128,128,128,0.5);
+    }    
+}
+#Backspace{
+    width: 102px;
+    background-color: rgb(39, 38, 38);
+}
+#CapsLock{
+    width: 102px;
+    background-color: rgb(39, 38, 38);
+}
+#Enter{
+    width: 104px;
+    background-color: rgb(39, 38, 38);
+}
+#ShiftLeft{
+    width: 104px;
+    background-color: rgb(39, 38, 38);
+}
+#Space{
+    width: 52px*7;    
+}
+#ControlLeft {
+    width: 80px;
+    background-color: rgb(39, 38, 38);
+}
+#ControlRight{
+    width: 80px;
+    background-color: rgb(39, 38, 38);
+}
+#ArrowRight{
+    background-color: rgb(39, 38, 38);
+}
+#ArrowDown{
+    background-color: rgb(39, 38, 38);
+}
+#ArrowUp{
+    background-color: rgb(39, 38, 38);
+}
+#ArrowLeft{
+    background-color: rgb(39, 38, 38);
+}
+#Tab{
+    background-color: rgb(39, 38, 38);
+}
+#Delete{
+    background-color: rgb(39, 38, 38);
+}
+#ShiftRight{
+    background-color: rgb(39, 38, 38);
+}
+#AltLeft{
+    background-color: rgb(39, 38, 38);
+}
+#AltRight{
+    background-color: rgb(39, 38, 38);
+}
+.not-shadow{
+    width: 48px;
+    height: 48px;
+    margin-top: 2px;
+    margin-left: 2px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0);
+    transition: 0.7s all; 
+}
